@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanoman Sound Sistem</title>
+
+  <!-- Google Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Menjaga semua konten agar terpusat secara vertikal */
+      min-height: 100vh;
+      padding: 20px;
+      background-image: url('logo/mixdig.jpg'); /* Ganti path jika beda */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      backdrop-filter: brightness(0.5);
+    }
+
+    .logo-container {
+      margin-top: 10px;
+      width: 400px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .welcome-text {
+      font-size: 4rem;
+      font-weight: 900; /* Lebih bold */
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      letter-spacing: 2px;
+      text-decoration: none;
+      margin-top: 0; /* Hilangkan margin-top agar lebih terpusat */
+      margin-bottom: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background-color: #00ffd5;
+      color: #000;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-link:hover {
+      background-color: #00bfa6;
+    }
+
+    .login-link {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: #00ffd5;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .login-link:hover {
+      background-color: #00bfa6;
+    }
+
+    @media screen and (max-width: 768px) {
+      .welcome-text {
+        font-size: 2.2rem;
+      }
+
+      .btn-link {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      .logo-container {
+        width: 200px;
+      }
+
+      .button-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Admin Login -->
+  <a href="login.html" class="login-link">Log Admin</a>
+
+  <!-- Logo dengan Link -->
+  <a href="about.html" class="logo-container">
+    <img src="logo/20250316_222129.png" alt="Hanoman Sound Sistem Logo" />
+  </a>
+
+  <!-- Welcome Text dengan Link -->
+  <a href="about.html" class="welcome-text">Welcome to Hanoman Sound Sistem</a>
+
+  <!-- Tombol Aksi -->
+  <div class="button-container">
+    <a href="about.html" class="btn-link">Tentang Kami</a>
+    <a href="paket.html" class="btn-link">Lihat Paket Layanan</a>
+  </div>
+</body>
+
+</html>

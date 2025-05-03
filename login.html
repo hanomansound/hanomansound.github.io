@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin - Hanoman Sound Sistem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 12px;
+      width: 400px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #00ffd5;
+    }
+    .login-container label {
+      font-size: 1.1rem;
+      color: #e0f7fa;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00ffd5;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #00bfae;
+    }
+    .error-message {
+      text-align: center;
+      color: red;
+      font-size: 1rem;
+      margin-top: -15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login Admin</h2>
+    <form id="loginForm" action="admin_dashboard.html" method="POST">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required placeholder="Masukkan username">
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Masukkan password">
+      
+      <button type="submit">Login</button>
+    </form>
+    <p class="error-message" id="error-message"></p>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Dummy check for username and password (You should replace it with actual logic or backend authentication)
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "admin123") {
+        window.location.href = "admin_dashboard.html"; // Redirect to the admin dashboard
+      } else {
+        document.getElementById("error-message").innerText = "Username atau password salah!";
+      }
+    });
+  </script>
+</body>
+</html>
